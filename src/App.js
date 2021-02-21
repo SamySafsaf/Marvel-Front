@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import Header from "./components/Header";
+import Characters from "./containers/Characters";
+import Comics from "./containers/Comics";
+import CharacterInComics from "./containers/CharacterInComics";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+const server = "http://localhost:3400";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Header />
+        <Switch>
+          <Route path="/comics/:id">
+            <CharacterInComics />
+          </Route>
+          <Route path="/comics">
+            <Comics />
+          </Route>
+          <Route path="/">
+            <Characters server={server} />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

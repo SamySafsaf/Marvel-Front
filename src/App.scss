@@ -1,0 +1,117 @@
+.header {
+  background-color: #202020;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .logo {
+      width: 150px;
+      height: 60px;
+      margin-bottom: 5px;
+    }
+    hr {
+      width: 100%;
+      margin-bottom: 14px;
+      color: lightgray;
+    }
+    .links-page {
+      height: 40px;
+      a {
+        text-decoration: none;
+        outline: none;
+        color: white;
+        font-size: 20px;
+      }
+      .characters-link {
+        margin-right: 20px;
+      }
+      a:hover {
+        border-bottom: red 2px solid;
+      }
+    }
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  img {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .card-text-container {
+    width: 250px;
+    height: 250px;
+    background-color: #202020;
+    color: white;
+    text-decoration: none;
+    outline: none;
+    padding: 20px;
+    box-sizing: border-box;
+    border-bottom-right-radius: 20px;
+  }
+}
+.card-container:hover {
+  img {
+    transform: scale(1.1);
+  }
+  .card-text-container {
+    transform: scale(1.1);
+  }
+}
+.characters-card,
+.comic-card {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.title-search {
+  display: flex;
+  flex-direction: column;
+  h2 {
+    font-size: 26px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+  input {
+    margin: 0 auto;
+    width: 1200px;
+    height: 20px;
+    text-align: center;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    padding-bottom: 10px;
+    border-bottom: 1px black solid;
+    margin-bottom: 20px;
+  }
+}
+.limit {
+  font-size: 18px;
+  margin-left: 110px;
+  margin-bottom: 20px;
+}
+.pagination {
+  display: flex;
+  button {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  .button-prev {
+    margin-left: 110px;
+  }
+  button:hover {
+    color: red;
+    cursor: pointer;
+  }
+}
