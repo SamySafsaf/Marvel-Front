@@ -5,8 +5,6 @@ import Comics from "./containers/Comics";
 import CharacterInComics from "./containers/CharacterInComics";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-const server = "http://localhost:3400";
-
 function App() {
   return (
     <div className="App">

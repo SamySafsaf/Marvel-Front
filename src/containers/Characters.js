@@ -15,7 +15,7 @@ const Characters = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3400/?name=${name}&skip=${skip}&limit=${limit}`
+        `https://marvel-back-sam.herokuapp.com/?name=${name}&skip=${skip}&limit=${limit}`
       );
       setData(response.data);
       setIsLoading(false);

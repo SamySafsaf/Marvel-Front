@@ -11,7 +11,9 @@ const CharacterInComics = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(`http://localhost:3400/comics/${id}`);
+      const response = await axios.get(
+        `https://marvel-back-sam.herokuapp.com/comics/${id}`
+      );
       setData(response.data);
       setIsLoading(false);
     } catch (error) {
