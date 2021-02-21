@@ -18,7 +18,7 @@ function App() {
             <Comics />
           </Route>
           <Route path="/">
-            <Characters server={server} />
+            <Characters />
           </Route>
         </Switch>
       </Router>
