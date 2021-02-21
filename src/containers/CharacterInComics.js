@@ -25,20 +25,22 @@ const CharacterInComics = () => {
   return isLoading ? (
     <div>En cours de chargement...</div>
   ) : (
-    <div>
+    <div className="character-in-comics">
       {data.comics.map((elem) => {
         return (
-          <div key={elem._id}>
+          <div key={elem._id} className="map-character-in-comics">
             <img
               src={`${elem.thumbnail.path}.${elem.thumbnail.extension}`}
               alt=""
             />
-            <div>{elem.title}</div>
-            {elem.description === "null" ? (
-              <div>No description</div>
-            ) : (
-              <div>{elem.description}</div>
-            )}
+            <div className="desc-cha-in">
+              <div>{elem.title}</div>
+              {elem.description === "null" ? (
+                <div>No description</div>
+              ) : (
+                <div>{elem.description}</div>
+              )}
+            </div>
           </div>
         );
       })}

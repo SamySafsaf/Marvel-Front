@@ -115,3 +115,41 @@
     cursor: pointer;
   }
 }
+
+.character-in-comics {
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.map-character-in-comics {
+  margin-bottom: 20px;
+  img {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .desc-cha-in {
+    width: 250px;
+    height: 250px;
+    background-color: #202020;
+    color: white;
+    text-decoration: none;
+    outline: none;
+    padding: 20px;
+    box-sizing: border-box;
+    border-bottom-right-radius: 20px;
+  }
+}
+.map-character-in-comics:hover {
+  img {
+    transform: scale(1.1);
+  }
+  .card-text-container {
+    transform: scale(1.1);
+  }
+}
